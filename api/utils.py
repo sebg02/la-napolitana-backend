@@ -32,6 +32,11 @@ def send_contact_email(name, message, email):
     response = requests.post(EMAILJS_API_URL, json=email_data)
     print("EmailJS Status Code:", response.status_code)
     print("EmailJS Response:", response.text)
+    print(EMAILJS_SERVICE_ID)
+    print(EMAILJS_TEMPLATE_CONTACT_ID)
+    print(EMAILJS_USER_ID)
+    print(EMAILJS_PK)
+    print(EMAILJS_API_URL)
     return response.status_code == 200  
 
 
